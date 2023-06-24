@@ -1,0 +1,4 @@
+enum RegisterTypeEnum{
+  user,
+  vendor,
+}
