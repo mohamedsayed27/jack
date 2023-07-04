@@ -9,14 +9,14 @@ import '../../widgets/reservations_widget/all_orders_widget.dart';
 import '../../widgets/reservations_widget/end_orders.dart';
 import '../../widgets/reservations_widget/ordered_orders_widget.dart';
 
-class ReservationsScreen extends StatefulWidget {
-  const ReservationsScreen({Key? key}) : super(key: key);
+class UserReservationsScreen extends StatefulWidget {
+  const UserReservationsScreen({Key? key}) : super(key: key);
 
   @override
-  State<ReservationsScreen> createState() => _ReservationsScreenState();
+  State<UserReservationsScreen> createState() => _UserReservationsScreenState();
 }
 
-class _ReservationsScreenState extends State<ReservationsScreen>
+class _UserReservationsScreenState extends State<UserReservationsScreen>
     with TickerProviderStateMixin {
   List<String> titles = [
     "dd",

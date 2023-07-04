@@ -126,7 +126,9 @@ class VendorRegisterComponent extends StatelessWidget {
         ),
         CustomButton(
           buttonTitle: "انشاء حساب",
-          isTapped: () {},
+          isTapped: () {
+            Navigator.pushNamedAndRemoveUntil(context, ScreenName.vendorMainLayoutScreen, (route) => false);
+          },
           width: double.infinity,
           height: 56.h,
         ),

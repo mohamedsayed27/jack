@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:jack/features/user/presentation/controller/main_layout_cubit/main_layout_cubit.dart';
 import '../../../../../core/assets_path/svg_path.dart';
 import '../../../../../core/theme/app_colors.dart';
-import '../../controller/main_layout_cubit/main_layout_state.dart';
+import '../../controller/user_main_layout_cubit/user_main_layout_cubit.dart';
+import '../../controller/user_main_layout_cubit/user_main_layout_state.dart';
 import 'bottom_nav_bar_icon_widget.dart';
 
-class CustomBottomNavigationBar extends StatelessWidget {
-  const CustomBottomNavigationBar({Key? key,})
+class CustomUserBottomNavigationBar extends StatelessWidget {
+  const CustomUserBottomNavigationBar({Key? key,})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<MainLayoutCubit, MainLayoutState>(
+    return BlocConsumer<UserMainLayoutCubit, MainLayoutState>(
       listener: (context, state) {
         // TODO: implement listener
       },
       builder: (context, state) {
-        var cubit = MainLayoutCubit.get(context);
+        var cubit = UserMainLayoutCubit.get(context);
         return BottomAppBar(
           shape: const CircularNotchedRectangle(),
           notchMargin: 10.r,

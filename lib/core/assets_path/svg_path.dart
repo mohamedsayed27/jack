@@ -12,6 +12,7 @@ class SvgPath{
   static const user = 'assets/svg/user.svg';
   static const discord = 'assets/svg/discord.svg';
   static const phone = 'assets/svg/phone.svg';
+  static const email = 'assets/svg/email.svg';
   static const saudiPhoneFieldIcon = 'assets/svg/saudiPhoneIcon.svg';
   static const saudiLogo = 'assets/svg/saudiLogo.svg';
   static const home = 'assets/svg/home.svg';
@@ -20,6 +21,7 @@ class SvgPath{
   static const more = 'assets/svg/more.svg';
   static const services = 'assets/svg/services.svg';
   static const searchIcon = 'assets/svg/searchIcon.svg';
+  static const person = 'assets/svg/person.svg';
   static const menuAppBarIcon = 'assets/svg/menuAppBarIcon.svg';
   static const chatIcon = 'assets/svg/chatIcon.svg';
 }

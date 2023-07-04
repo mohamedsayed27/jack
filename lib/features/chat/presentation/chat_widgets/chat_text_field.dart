@@ -21,7 +21,7 @@ class _ChatTextFieldState extends State<ChatTextField> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10.w),
-      height: 45.h,
+      height: 55.h,
       width: double.infinity,
       decoration: BoxDecoration(
         border: Border.all(
@@ -59,7 +59,7 @@ class _ChatTextFieldState extends State<ChatTextField> {
               child: CircleAvatar(
                 radius: 16.r,
                 backgroundColor: AppColors.greyColor,
-                child: Icon(Icons.add_a_photo_outlined,size: 20.r,color: Colors.grey,),
+                child: Icon(Icons.add_a_photo_outlined,size: 18.r,color: Colors.white,),
               ),
             ),
           )

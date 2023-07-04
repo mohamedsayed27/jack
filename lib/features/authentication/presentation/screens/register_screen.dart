@@ -34,13 +34,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CustomBackButton(
+                const CustomBackButton(
                   arrowColor: AppColors.whitColor,
                   foregroundColor: AppColors.whitColor,
                   backgroundColor: AppColors.primaryColor,
                   elevation: 10,
-                  height: 35.h,
-                  width: 35.w,
+                  height: 35,
+                  width: 35,
                 ),
                 Text(
                   "انشاء حساب",

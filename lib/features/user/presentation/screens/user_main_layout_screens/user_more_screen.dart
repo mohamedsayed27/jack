@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jack/core/app_router/screens_name.dart';
 
 import '../../../../../core/assets_path/fonts_path.dart';
 import '../../../../../core/assets_path/images_path.dart';
 import '../../widgets/profile_screen_widgets/background_widget.dart';
 import '../../widgets/profile_screen_widgets/custom_container.dart';
 
-class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+class UserProfileScreen extends StatefulWidget {
+  const UserProfileScreen({Key? key}) : super(key: key);
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  State<UserProfileScreen> createState() => _UserProfileScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _UserProfileScreenState extends State<UserProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +31,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 padding: EdgeInsets.symmetric(horizontal: 14.w),
                 child: InkWell(
                   onTap: () {
-
+                    Navigator.pushNamed(context, ScreenName.editProfileScreen);
                   },
                   child: Container(
                     height: 105.h,
@@ -127,23 +128,37 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: [
                     BuildCustomProfileContainer(
                       title: 'عن التطبيق',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, ScreenName.aboutAppScreen);
+                      },
                     ),
                     BuildCustomProfileContainer(
                       title: 'الشروط والاحكام',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, ScreenName.termsAndConditionsScreen);
+                      },
                     ),
                     BuildCustomProfileContainer(
                       title: 'سياسة الخصوصية',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, ScreenName.privacyScreen);
+                      },
                     ),
                     BuildCustomProfileContainer(
                       title: 'الاقتراحات والشكاوي',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, ScreenName.complaintsAndSuggestionsScreen);
+                      },
                     ),
                     BuildCustomProfileContainer(
                       title: 'الدعم الفني',
                       onPressed: () {},
+                    ),
+                    BuildCustomProfileContainer(
+                      title: 'الرسائل',
+                      onPressed: () {
+                        Navigator.pushNamed(context, ScreenName.messagesScreen);
+                      },
                     ),
                     BuildCustomProfileContainer(
                       title: 'تقيم التطبيق',
@@ -151,7 +166,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     BuildCustomProfileContainer(
                       title: 'تغير كلمة المرور',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, ScreenName.changePasswordScreen);
+                      },
                     ),
                     BuildCustomProfileContainer(
                       title: 'تسجيل الخروج',

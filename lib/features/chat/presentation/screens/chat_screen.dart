@@ -73,114 +73,225 @@ class _ChatScreenState extends State<ChatScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
       ),
-      body: BlocConsumer<ChatCubit, ChatState>(
-        listener: (context, state) {},
-        builder: (context, state) {
-          var cubit = ChatCubit.get(context);
-          return Column(
-            children: [
-              Expanded(
-                child: ListView.builder(
-                  reverse: true,
-                  padding: EdgeInsets.symmetric(horizontal: 20.h),
-                  itemBuilder: (BuildContext context, int index) {
-                    if (cubit.messagesList[index].senderId == "userId") {
-                      return cubit.messagesList[index].messageType == 'text'
-                          ? Padding(
-                              padding: EdgeInsets.symmetric(vertical: 20.h),
-                              child: MyMessageItem(
-                                message: cubit.messagesList[index].messageText!,
-                                time: Jiffy(cubit.messagesList[index].dateTime)
-                                    .Hm,
-                                isSeen:
-                                    cubit.messagesList[index].isMessageRead!,
-                              ),
-                            )
-                          : Padding(
-                              padding: EdgeInsets.symmetric(vertical: 20.h),
-                              child: ImageContainer(
-                                alignment: Alignment.centerRight,
-                                imagePath: cubit.messagesList[index].image!,
-                              ),
-                            );
-                    } else {
-                      if (cubit.messagesList[index].isMessageRead! == false) {
-                        cubit.updateMessageSeenIcon(
-                          receiverId: widget.chatScreenArgs.receiverId,
-                          senderId: "userId",
-                          messageId: cubit.messagesList[index].messageId!,
-                        );
-                      }
-                      return cubit.messagesList[index].messageType == 'text'
-                          ? Padding(
-                              padding: EdgeInsets.symmetric(vertical: 20.h),
-                              child: AnotherPersonMessageItem(
-                                message: cubit.messagesList[index].messageText!,
-                                time: Jiffy(cubit.messagesList[index].dateTime)
-                                    .Hm,
-                              ),
-                            )
-                          : Padding(
-                              padding: EdgeInsets.symmetric(vertical: 20.h),
-                              child: ImageContainer(
-                                alignment: Alignment.centerLeft,
-                                imagePath: cubit.messagesList[index].image!,
-                              ),
-                            );
-                    }
-                  },
-                  itemCount: cubit.messagesList.length,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15.w),
-                child: SizedBox(
-                  height: 100.h,
-                  width: double.infinity,
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        width: 50.w,
-                        height: 50.h,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            // cubit.sendMessage(receiverId: widget.chatScreenArgs.receiverId, senderId: "userId", receiverName: widget.chatScreenArgs.receiverName, senderName: senderName, receiverImg: widget.chatScreenArgs.receiverId, senderImg: , text: chatController.text, dateTime: DateTime.now().toIso8601String(), image: null, messageType: "text", isMessageRead: false);
-                            chatController.clear();
-                            isTapped = false;
-                          },
-                          style: ElevatedButton.styleFrom(
-                            shape: const CircleBorder(),
-                          ),
-                          child: Directionality(
-                            textDirection: TextDirection.ltr,
-                            child: Icon(
-                              Icons.send_rounded,
-                              color: Colors.white,
-                              size: 24.r,
-                            ),
-                          ),
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.builder(
+              reverse: true,
+              padding: EdgeInsets.symmetric(horizontal: 20.h),
+              itemBuilder: (BuildContext context, int index) {
+                if (index%2==0) {
+                  return Padding(
+                    padding: EdgeInsets.symmetric(vertical: 20.h),
+                    child: const MyMessageItem(
+                      message: "مرحبا بك!",
+                      time: "2:08",
+                      isSeen: true,
+                    ),
+                  );
+                } else {
+                  return  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 20.h),
+                    child: const AnotherPersonMessageItem(
+                      message: "مرحبا بك!",
+                      time: "2:08",
+                    ),
+                  );
+                }
+              },
+              itemCount: 10,
+            ),
+            // ListView.builder(
+            //   reverse: true,
+            //   padding: EdgeInsets.symmetric(horizontal: 20.h),
+            //   itemBuilder: (BuildContext context, int index) {
+            //     if (index%2==0) {
+            //       return Padding(
+            //               padding: EdgeInsets.symmetric(vertical: 20.h),
+            //               child: const MyMessageItem(
+            //                 message: "مرحبا بك!",
+            //                 time: "2:08",
+            //                 isSeen: true,
+            //               ),
+            //             );
+            //     } else {
+            //       if (cubit.messagesList[index].isMessageRead! == false) {
+            //         cubit.updateMessageSeenIcon(
+            //           receiverId: widget.chatScreenArgs.receiverId,
+            //           senderId: "userId",
+            //           messageId: cubit.messagesList[index].messageId!,
+            //         );
+            //       }
+            //       return  Padding(
+            //               padding: EdgeInsets.symmetric(vertical: 20.h),
+            //               child: const AnotherPersonMessageItem(
+            //                 message: "مرحبا بك!",
+            //                 time: "2:08",
+            //               ),
+            //             );
+            //     }
+            //   },
+            //   itemCount: 10,
+            // ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15.w),
+            child: SizedBox(
+              height: 100.h,
+              width: double.infinity,
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 50.w,
+                    height: 50.h,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // cubit.sendMessage(receiverId: widget.chatScreenArgs.receiverId, senderId: "userId", receiverName: widget.chatScreenArgs.receiverName, senderName: senderName, receiverImg: widget.chatScreenArgs.receiverId, senderImg: , text: chatController.text, dateTime: DateTime.now().toIso8601String(), image: null, messageType: "text", isMessageRead: false);
+                        chatController.clear();
+                        isTapped = false;
+                      },
+                      style: ElevatedButton.styleFrom(
+                        shape: const CircleBorder(),
+                      ),
+                      child: Directionality(
+                        textDirection: TextDirection.ltr,
+                        child: Icon(
+                          Icons.send_rounded,
+                          color: Colors.white,
+                          size: 24.r,
                         ),
                       ),
-                      SizedBox(
-                        width: 10.w,
-                      ),
-                      Expanded(
-                        child: ChatTextField(
-                          pickImageFunction: () {
-                            cubit.getImagePick();
-                          },
-                          controller: chatController,
-                          isTapped: isTapped,
-                        ),
-                      )
-                    ],
+                    ),
                   ),
-                ),
-              )
-            ],
-          );
-        },
+                  SizedBox(
+                    width: 10.w,
+                  ),
+                  Expanded(
+                    child: ChatTextField(
+                      pickImageFunction: () {
+                      },
+                      controller: chatController,
+                      isTapped: isTapped,
+                    ),
+                  )
+                ],
+              ),
+            ),
+          )
+        ],
       ),
+      // BlocConsumer<ChatCubit, ChatState>(
+      //   listener: (context, state) {},
+      //   builder: (context, state) {
+      //     return Column(
+      //       children: [
+      //         Expanded(
+      //           child: ListView.builder(
+      //             reverse: true,
+      //             padding: EdgeInsets.symmetric(horizontal: 20.h),
+      //             itemBuilder: (BuildContext context, int index) {
+      //               if (index%2==0) {
+      //                 return Padding(
+      //                   padding: EdgeInsets.symmetric(vertical: 20.h),
+      //                   child: const MyMessageItem(
+      //                     message: "مرحبا بك!",
+      //                     time: "2:08",
+      //                     isSeen: true,
+      //                   ),
+      //                 );
+      //               } else {
+      //                 return  Padding(
+      //                   padding: EdgeInsets.symmetric(vertical: 20.h),
+      //                   child: const AnotherPersonMessageItem(
+      //                     message: "مرحبا بك!",
+      //                     time: "2:08",
+      //                   ),
+      //                 );
+      //               }
+      //             },
+      //             itemCount: 10,
+      //           ),
+      //           // ListView.builder(
+      //           //   reverse: true,
+      //           //   padding: EdgeInsets.symmetric(horizontal: 20.h),
+      //           //   itemBuilder: (BuildContext context, int index) {
+      //           //     if (index%2==0) {
+      //           //       return Padding(
+      //           //               padding: EdgeInsets.symmetric(vertical: 20.h),
+      //           //               child: const MyMessageItem(
+      //           //                 message: "مرحبا بك!",
+      //           //                 time: "2:08",
+      //           //                 isSeen: true,
+      //           //               ),
+      //           //             );
+      //           //     } else {
+      //           //       if (cubit.messagesList[index].isMessageRead! == false) {
+      //           //         cubit.updateMessageSeenIcon(
+      //           //           receiverId: widget.chatScreenArgs.receiverId,
+      //           //           senderId: "userId",
+      //           //           messageId: cubit.messagesList[index].messageId!,
+      //           //         );
+      //           //       }
+      //           //       return  Padding(
+      //           //               padding: EdgeInsets.symmetric(vertical: 20.h),
+      //           //               child: const AnotherPersonMessageItem(
+      //           //                 message: "مرحبا بك!",
+      //           //                 time: "2:08",
+      //           //               ),
+      //           //             );
+      //           //     }
+      //           //   },
+      //           //   itemCount: 10,
+      //           // ),
+      //         ),
+      //         Padding(
+      //           padding: EdgeInsets.symmetric(horizontal: 15.w),
+      //           child: SizedBox(
+      //             height: 100.h,
+      //             width: double.infinity,
+      //             child: Row(
+      //               children: [
+      //                 SizedBox(
+      //                   width: 50.w,
+      //                   height: 50.h,
+      //                   child: ElevatedButton(
+      //                     onPressed: () {
+      //                       // cubit.sendMessage(receiverId: widget.chatScreenArgs.receiverId, senderId: "userId", receiverName: widget.chatScreenArgs.receiverName, senderName: senderName, receiverImg: widget.chatScreenArgs.receiverId, senderImg: , text: chatController.text, dateTime: DateTime.now().toIso8601String(), image: null, messageType: "text", isMessageRead: false);
+      //                       chatController.clear();
+      //                       isTapped = false;
+      //                     },
+      //                     style: ElevatedButton.styleFrom(
+      //                       shape: const CircleBorder(),
+      //                     ),
+      //                     child: Directionality(
+      //                       textDirection: TextDirection.ltr,
+      //                       child: Icon(
+      //                         Icons.send_rounded,
+      //                         color: Colors.white,
+      //                         size: 24.r,
+      //                       ),
+      //                     ),
+      //                   ),
+      //                 ),
+      //                 SizedBox(
+      //                   width: 10.w,
+      //                 ),
+      //                 Expanded(
+      //                   child: ChatTextField(
+      //                     pickImageFunction: () {
+      //                     },
+      //                     controller: chatController,
+      //                     isTapped: isTapped,
+      //                   ),
+      //                 )
+      //               ],
+      //             ),
+      //           ),
+      //         )
+      //       ],
+      //     );
+      //   },
+      // ),
     );
   }
 }

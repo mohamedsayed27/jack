@@ -23,8 +23,10 @@ class AppColors{
   static const primaryColor = Color(0xff24C6C9);
   static const whitColor = Color(0xffFFFFFF);
   static const pinkColor = Color(0xffe94b53);
+  static const authTextFieldFillColor =  Color(0xffF9F9F9);
   static const orangeColor = Color(0xffef794a);
   static const greyTextColor = Color(0xff333030);
+  static const greyDealsContainerColor = Color(0xffE7E7E7);
   static const lightOrangeColor = Color(0xfff4a68b);
   static const greySearchTextFilledColor =  Color(0xfff8f6f8);
   static const greyColor = Color(0xff989799);

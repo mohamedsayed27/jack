@@ -39,26 +39,27 @@ class BuildChatItem extends StatelessWidget {
               clipBehavior: Clip.antiAlias,
               decoration:
               BoxDecoration(borderRadius: BorderRadius.circular(10.r)),
-              child:CachedNetworkImage(
-                fit: BoxFit.cover,
-                imageUrl:
-                image,
-                placeholder: (context, url) =>
-                    Shimmer.fromColors(
-                      baseColor: Colors.grey[400]!,
-                      highlightColor: Colors.grey[300]!,
-                      child: Container(
-                        height: double.infinity,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                      ),
-                    ),
-                errorWidget: (context, url, error) =>
-                const Icon(Icons.error),
-              ),
+              child: Image.asset(image,fit: BoxFit.cover,),
+              // CachedNetworkImage(
+              //   fit: BoxFit.cover,
+              //   imageUrl:
+              //   image,
+              //   placeholder: (context, url) =>
+              //       Shimmer.fromColors(
+              //         baseColor: Colors.grey[400]!,
+              //         highlightColor: Colors.grey[300]!,
+              //         child: Container(
+              //           height: double.infinity,
+              //           width: double.infinity,
+              //           decoration: BoxDecoration(
+              //             color: Colors.black,
+              //             borderRadius: BorderRadius.circular(8.0),
+              //           ),
+              //         ),
+              //       ),
+              //   errorWidget: (context, url, error) =>
+              //   const Icon(Icons.error),
+              // ),
             ),
             SizedBox(
               width: 10.w,
@@ -89,7 +90,8 @@ class BuildChatItem extends StatelessWidget {
               width: 5.w,
             ),
             Text(
-              Jiffy(dateTime).Hm,
+              dateTime,
+              // Jiffy(dateTime).yM,
               style: TextStyle(
                   color: const Color(0xff939FB5),
                   fontFamily: FontsPath.almaraiBold,

@@ -20,8 +20,8 @@ class CustomBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height:height,
-      width: width,
+      height:height.h,
+      width: width.w,
       child: ElevatedButton(
         onPressed: () {
           Navigator.pop(context);

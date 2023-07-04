@@ -8,8 +8,8 @@ import '../../widgets/home_screen_widgets/credit_card_details_widget.dart';
 import '../../widgets/home_screen_widgets/custom_appbar.dart';
 import '../../widgets/home_screen_widgets/payment_widgets_component.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class UserHomeScreen extends StatelessWidget {
+  const UserHomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

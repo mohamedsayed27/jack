@@ -49,7 +49,9 @@ class UserRegisterComponent extends StatelessWidget {
         ),
         CustomButton(
           buttonTitle: "انشاء حساب",
-          isTapped: () {},
+          isTapped: () {
+            Navigator.pushNamedAndRemoveUntil(context, ScreenName.userMainLayoutScreen, (route) => false);
+          },
           width: double.infinity,
           height: 56.h,
         ),

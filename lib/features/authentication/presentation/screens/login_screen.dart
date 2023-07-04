@@ -103,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
             CustomButton(
               buttonTitle: "تسجيل الدخول",
               isTapped: () {
-                Navigator.pushNamed(context, ScreenName.mainLayoutScreen);
+                Navigator.pushNamed(context, ScreenName.userMainLayoutScreen);
               },
               width: double.infinity,
               height: 56.h,

@@ -7,10 +7,10 @@ import '../../../data/models/reservation_model.dart';
 class AllOrdersWidgetItem extends StatelessWidget {
   final ReservationModel reservationModel;
 
-  const AllOrdersWidgetItem(
-      {Key? key,
-        required this.reservationModel,})
-      : super(key: key);
+  const AllOrdersWidgetItem({
+    Key? key,
+    required this.reservationModel,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class AllOrdersWidgetItem extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  "klk",
+                  "click",
                   style: TextStyle(
                     fontSize: 10.sp,
                     fontFamily: FontsPath.almaraiBold,
@@ -54,7 +54,10 @@ class AllOrdersWidgetItem extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.r),
                   ),
-                  child: Image.asset(reservationModel.service!.imgUrl!,fit: BoxFit.cover,),
+                  child: Image.asset(
+                    reservationModel.service!.imgUrl!,
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 SizedBox(
                   width: 10.w,
@@ -154,14 +157,12 @@ class AllOrdersWidgetItem extends StatelessWidget {
                     SizedBox(
                       width: 110.w,
                       child: ElevatedButton(
-                        onPressed: (){
-
-                        },
+                        onPressed: () {},
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.red,
                           shape: RoundedRectangleBorder(
                             borderRadius:
-                            BorderRadius.circular(5.r), // <-- Radius
+                                BorderRadius.circular(5.r), // <-- Radius
                           ),
                         ),
                         child: Row(
