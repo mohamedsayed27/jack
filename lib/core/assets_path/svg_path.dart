@@ -24,4 +24,7 @@ class SvgPath{
   static const person = 'assets/svg/person.svg';
   static const menuAppBarIcon = 'assets/svg/menuAppBarIcon.svg';
   static const chatIcon = 'assets/svg/chatIcon.svg';
+  static const visaIcon = 'assets/svg/visaIcon.svg';
+  static const image12 = 'assets/svg/image 12.svg';
+  static const lockKeyIcon = 'assets/svg/lockKeyIcon.svg';
 }

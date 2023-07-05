@@ -128,11 +128,15 @@ class _VendorMoreScreenState extends State<VendorMoreScreen> {
                   children: [
                     BuildCustomProfileContainer(
                       title: 'الصفقات',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, ScreenName.dealsScreen);
+                      },
                     ),
                     BuildCustomProfileContainer(
                       title: 'المحفظه',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, ScreenName.walletScreen);
+                      },
                     ),
                     BuildCustomProfileContainer(
                       title: 'عن التطبيق',

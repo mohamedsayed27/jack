@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../../core/assets_path/fonts_path.dart';
+import '../../../../../../core/assets_path/images_path.dart';
 import '../../../../../../core/assets_path/svg_path.dart';
 import '../../../../../../core/theme/app_colors.dart';
 import '../../../../../authentication/presentation/widgets/custom_button.dart';
@@ -83,6 +84,20 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               SizedBox(
                 height: 42.h,
               ),
+              Container(
+                height: 100.h,
+                width: 100.w,
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                decoration:
+                const BoxDecoration(shape: BoxShape.circle),
+                child: Image.asset(
+                  ImagesPath.onboarding1,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              SizedBox(
+                height: 20.h,
+              ),
               Row(
                 children: [
                   Expanded(
@@ -135,7 +150,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   editProfileTextFormField: EditProfileTextFormField(
                       prefix: Padding(
                         padding: EdgeInsets.all(13.r),
-                        child: SvgPicture.asset(SvgPath.email,width: 24.w,height: 24.h,),
+                        child: SvgPicture.asset(SvgPath.email,width: 24.w,height: 24.h,colorFilter: const ColorFilter.mode(AppColors.primaryColor, BlendMode.srcIn),),
                       ),
                       hintText: 'البريد الالكتروني', controller: email)),
               SizedBox(

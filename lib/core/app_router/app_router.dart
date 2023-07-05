@@ -14,6 +14,8 @@ import '../../features/user/presentation/screens/user_main_layout_screens/more_s
 import '../../features/user/presentation/screens/user_main_layout_screens/more_screen_screens/edit_profile_screens.dart';
 import '../../features/user/presentation/screens/user_main_layout_screens/more_screen_screens/privacy_screen.dart';
 import '../../features/user/presentation/screens/user_main_layout_screens/more_screen_screens/terms_and_conditions_screen.dart';
+import '../../features/vendor/presentation/screens/vendor_main_layout_screens/more_screen_screens/deals_screen.dart';
+import '../../features/vendor/presentation/screens/vendor_main_layout_screens/more_screen_screens/wallet_screen.dart';
 import '../../features/vendor/presentation/screens/vendor_main_layout_screens/vendor_main_layout_screen.dart';
 
 
@@ -43,6 +45,10 @@ class AppRouter {
           return _animateRouteBuilder(const TermsAndConditionsScreen());
         case ScreenName.changePasswordScreen:
           return _animateRouteBuilder(const ChangePasswordScreen());
+        case ScreenName.walletScreen:
+          return _animateRouteBuilder(const WalletScreen());
+        case ScreenName.dealsScreen:
+          return _animateRouteBuilder(const DealsScreen());
         case ScreenName.complaintsAndSuggestionsScreen:
           return _animateRouteBuilder(const ComplaintsAndSuggestionsScreen());
         case ScreenName.messagesScreen:

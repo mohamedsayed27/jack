@@ -11,6 +11,8 @@ class ScreenName{
   static const userCartScreen = 'user_cart_screen.dart';
   static const messagesScreen = 'messages_screen.dart';
   static const chatScreen = 'chat_screen.dart';
+  static const walletScreen = 'wallet_screen.dart';
+  static const dealsScreen = 'deals_screen.dart';
   static const aboutAppScreen = 'about_app_screen.dart';
   static const privacyScreen = 'privacy_screen.dart';
   static const editProfileScreen = 'edit_profile_screen.dart';

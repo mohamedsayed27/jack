@@ -37,7 +37,9 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                     height: 105.h,
                     width: double.infinity,
                     padding: EdgeInsets.symmetric(
-                        horizontal: 25.w, vertical: 5.h),
+                      horizontal: 25.w,
+                      vertical: 5.h,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(5.r),
@@ -57,15 +59,13 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                           padding: EdgeInsets.all(1.5.r),
                           clipBehavior: Clip.antiAliasWithSaveLayer,
                           decoration: const BoxDecoration(
-                              color: Color(0xffDDB956),
-                              shape: BoxShape.circle),
+                              color: Color(0xffDDB956), shape: BoxShape.circle),
                           child: Container(
                             height: 74.h,
                             width: 74.w,
-                            clipBehavior:
-                            Clip.antiAliasWithSaveLayer,
-                            decoration: const BoxDecoration(
-                                shape: BoxShape.circle),
+                            clipBehavior: Clip.antiAliasWithSaveLayer,
+                            decoration:
+                                const BoxDecoration(shape: BoxShape.circle),
                             child: Image.asset(
                               ImagesPath.onboarding1,
                               fit: BoxFit.cover,
@@ -85,23 +85,20 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 14.sp,
-                                  fontFamily:
-                                  FontsPath.poppinsRegular,
+                                  fontFamily: FontsPath.poppinsRegular,
                                 ),
                               ),
-                                SizedBox(
-                                  height: 5.h,
-                                ),
-                               Text(
+                              SizedBox(
+                                height: 5.h,
+                              ),
+                              Text(
                                 "Ahmed@gmail.com",
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 14.sp,
-                                  fontFamily:
-                                  FontsPath.poppinsRegular,
+                                  fontFamily: FontsPath.poppinsRegular,
                                 ),
-                              )
-                                  ,
+                              ),
                             ],
                           ),
                         ),
@@ -135,7 +132,8 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                     BuildCustomProfileContainer(
                       title: 'الشروط والاحكام',
                       onPressed: () {
-                        Navigator.pushNamed(context, ScreenName.termsAndConditionsScreen);
+                        Navigator.pushNamed(
+                            context, ScreenName.termsAndConditionsScreen);
                       },
                     ),
                     BuildCustomProfileContainer(
@@ -147,7 +145,8 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                     BuildCustomProfileContainer(
                       title: 'الاقتراحات والشكاوي',
                       onPressed: () {
-                        Navigator.pushNamed(context, ScreenName.complaintsAndSuggestionsScreen);
+                        Navigator.pushNamed(
+                            context, ScreenName.complaintsAndSuggestionsScreen);
                       },
                     ),
                     BuildCustomProfileContainer(
@@ -167,7 +166,8 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                     BuildCustomProfileContainer(
                       title: 'تغير كلمة المرور',
                       onPressed: () {
-                        Navigator.pushNamed(context, ScreenName.changePasswordScreen);
+                        Navigator.pushNamed(
+                            context, ScreenName.changePasswordScreen);
                       },
                     ),
                     BuildCustomProfileContainer(

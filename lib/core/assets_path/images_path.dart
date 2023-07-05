@@ -19,4 +19,6 @@ class ImagesPath {
   static const expressDelivery = 'assets/images/expressDelivery.png';
   static const deliveryMan = 'assets/images/deliveryMan.png';
   static const piston = 'assets/images/piston.png';
+  static const van = 'assets/images/van.png';
+  static const image12 = 'assets/images/image 12.png';
 }

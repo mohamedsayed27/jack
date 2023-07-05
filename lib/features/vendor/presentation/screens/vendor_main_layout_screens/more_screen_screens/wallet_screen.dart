@@ -82,7 +82,6 @@ class WalletScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-
                   SizedBox(
                     height: 20.h,
                   ),
@@ -90,6 +89,7 @@ class WalletScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             "الرصيد الكلي",
@@ -99,6 +99,7 @@ class WalletScreen extends StatelessWidget {
                               fontSize: 18.sp,
                             ),
                           ),
+                          SizedBox(height:10.h),
                           Text(
                             "(SAR)",
                             style: TextStyle(
@@ -126,6 +127,7 @@ class WalletScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             "الارباح التسوقيه",
@@ -135,6 +137,7 @@ class WalletScreen extends StatelessWidget {
                               fontSize: 18.sp,
                             ),
                           ),
+                          SizedBox(height:10.h),
                           Text(
                             "(SAR)",
                             style: TextStyle(
@@ -162,6 +165,7 @@ class WalletScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             "الارباح من العروض",
@@ -171,6 +175,7 @@ class WalletScreen extends StatelessWidget {
                               fontSize: 18.sp,
                             ),
                           ),
+                          SizedBox(height:10.h),
                           Text(
                             "(SAR)",
                             style: TextStyle(

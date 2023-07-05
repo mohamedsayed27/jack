@@ -43,9 +43,9 @@ class MyApp extends StatelessWidget {
             supportedLocales: const [
               Locale("ar", "AE"),
             ],
-            // onGenerateRoute: AppRouter.generateRoute,
-            // initialRoute: ScreenName.splashscreen,
-            home: WalletScreen(),
+            onGenerateRoute: AppRouter.generateRoute,
+            initialRoute: ScreenName.splashscreen,
+            // home: DealsScreen(),
           ),
         );
       },
